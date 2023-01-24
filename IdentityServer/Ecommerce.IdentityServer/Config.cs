@@ -12,8 +12,8 @@ namespace Ecommerce.IdentityServer
     {
         public static IEnumerable<ApiResource> ApiResources => new ApiResource[]
         {
-            new ApiResource("Catalog_Fullpermision"){Scopes={"Catalog_Fullpermision"}},
-            new ApiResource(IdentityServerConstants.LocalApi.ScopeName)
+            new ApiResource("resource_Catalog"){Scopes={"Catalog_FullPermision"}},
+                    new ApiResource(IdentityServerConstants.LocalApi.ScopeName)
         };
 
         public static IEnumerable<IdentityResource> IdentityResources =>
@@ -21,13 +21,14 @@ namespace Ecommerce.IdentityServer
                    {
                 new IdentityResources.OpenId(),
                 new IdentityResources.Profile(),
+                new IdentityResources.Email()
                    };
 
         public static IEnumerable<ApiScope> ApiScopes =>
             new ApiScope[]
             {
                 new ApiScope("Catalog_FullPermision", "CatalogApi için full erişim"),
-                new ApiScope(IdentityServerConstants.LocalApi.ScopeName)
+                        new ApiScope(IdentityServerConstants.LocalApi.ScopeName)
             };
 
         public static IEnumerable<Client> Clients =>
@@ -42,7 +43,7 @@ namespace Ecommerce.IdentityServer
                     AllowedGrantTypes = GrantTypes.ClientCredentials,
                     ClientSecrets = { new Secret("secret".Sha256()) },
 
-                    AllowedScopes = { "Catalog_Fullpermision", IdentityServerConstants.LocalApi.ScopeName }
+                    AllowedScopes = { "Catalog_FullPermision", IdentityServerConstants.LocalApi.ScopeName }
                 },
 
                 // interactive client using code flow + pkce
@@ -51,6 +52,11 @@ namespace Ecommerce.IdentityServer
                     ClientId = "coremncclientforuser",
                     ClientName = "Asp.Net Core",
                     ClientSecrets = { new Secret("secret".Sha256()) },
+
+                    AllowOfflineAccess=true,
+                    AllowedGrantTypes=GrantTypes.ResourceOwnerPassword,
+                    AllowedScopes={ "Catalog_FullPermision", IdentityServerConstants.StandardScopes.Email, IdentityServerConstants.StandardScopes.OpenId, IdentityServerConstants.StandardScopes.Profile, IdentityServerConstants.StandardScopes.OfflineAccess, IdentityServerConstants.LocalApi.ScopeName },
+                    AccessTokenLifetime=300
 
                 },
             };
