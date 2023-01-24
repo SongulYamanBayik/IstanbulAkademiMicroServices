@@ -23,6 +23,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IdentityServer", "IdentityS
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ecommerce.IdentityServer", "IdentityServer\Ecommerce.IdentityServer\Ecommerce.IdentityServer.csproj", "{465F1A47-1323-4001-8622-76C67DDEAED6}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Basket", "Basket", "{C47D0EDF-AF07-44DD-A349-DF8FA5F61D2F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AkademiECommerce.Services.Basket", "Services\Basket\AkademiECommerce.Services.Basket\AkademiECommerce.Services.Basket.csproj", "{8B2EFBAB-5921-4E87-9AFE-3A45478C742E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +45,10 @@ Global
 		{465F1A47-1323-4001-8622-76C67DDEAED6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{465F1A47-1323-4001-8622-76C67DDEAED6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{465F1A47-1323-4001-8622-76C67DDEAED6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B2EFBAB-5921-4E87-9AFE-3A45478C742E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B2EFBAB-5921-4E87-9AFE-3A45478C742E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B2EFBAB-5921-4E87-9AFE-3A45478C742E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B2EFBAB-5921-4E87-9AFE-3A45478C742E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,6 +58,8 @@ Global
 		{FFD15F65-E32B-45B1-BFA0-0D38AC9F8CF4} = {AE9F9094-EB03-4EEE-AC4A-0758F2AC89AE}
 		{8925CDDE-74D1-4395-BF58-300B2A30E380} = {6018AEC3-2FB3-4B62-9356-A6410C227F73}
 		{465F1A47-1323-4001-8622-76C67DDEAED6} = {DD11D4FD-D1D6-422C-BCE6-B3AF59F569C8}
+		{C47D0EDF-AF07-44DD-A349-DF8FA5F61D2F} = {3A600F7B-B33C-49CD-88E5-E22C036AED9C}
+		{8B2EFBAB-5921-4E87-9AFE-3A45478C742E} = {C47D0EDF-AF07-44DD-A349-DF8FA5F61D2F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6255335D-9DC4-42E0-A1DF-DEE2C4B5F87D}
