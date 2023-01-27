@@ -13,6 +13,7 @@ namespace Ecommerce.IdentityServer
         public static IEnumerable<ApiResource> ApiResources => new ApiResource[]
         {
             new ApiResource("resource_Catalog"){Scopes={"Catalog_FullPermision"}},
+                new ApiResource("resource_PhotoStock"){Scopes={"PhotoStock_FullPermision"}},
                     new ApiResource(IdentityServerConstants.LocalApi.ScopeName)
         };
 
@@ -28,6 +29,7 @@ namespace Ecommerce.IdentityServer
             new ApiScope[]
             {
                 new ApiScope("Catalog_FullPermision", "CatalogApi için full erişim"),
+                    new ApiScope("PhotoStock_FullPermision", "PhotoStockApi için full erişim"),
                         new ApiScope(IdentityServerConstants.LocalApi.ScopeName)
             };
 
@@ -43,7 +45,7 @@ namespace Ecommerce.IdentityServer
                     AllowedGrantTypes = GrantTypes.ClientCredentials,
                     ClientSecrets = { new Secret("secret".Sha256()) },
 
-                    AllowedScopes = { "Catalog_FullPermision", IdentityServerConstants.LocalApi.ScopeName }
+                    AllowedScopes = { "Catalog_FullPermision", "PhotoStock_FullPermision" , IdentityServerConstants.LocalApi.ScopeName }
                 },
 
                 // interactive client using code flow + pkce
